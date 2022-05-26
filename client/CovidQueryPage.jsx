@@ -64,7 +64,8 @@ import {
   ProceduresTable
 } from 'meteor/clinical:hl7-fhir-data-infrastructure';
 
-import { PageCanvas, StyledCard, PatientTable } from 'material-fhir-ui';
+
+import { StyledCard, PageCanvas, PatientTable } from 'fhir-starter';
 import { ReactMeteorData, useTracker } from 'meteor/react-meteor-data';
 
 import FhirUtilities from '../lib/FhirUtilities';
@@ -1908,7 +1909,7 @@ function CovidQueryPage(props){
         title={patientTitle}  
         style={{fontSize: '100%'}} />
       <CardContent style={{fontSize: '100%', paddingBottom: '28px'}}>
-        <PatientTable
+        {/* <PatientTable
           id="fetchedPatientsTable"
           patients={patients}
           hideIdentifier
@@ -1921,7 +1922,7 @@ function CovidQueryPage(props){
           showCounts={false}
           hideActive
           onRowClick={handlePatientRowClick}
-      />
+      /> */}
       </CardContent>
       <CardActions style={{display: 'inline-flex', width: '100%'}} >
         <Button id="geocodePatientAddresses" color="primary" variant="contained" className={classes.button} onClick={handleGeocodeAddresses.bind(this)} >Geocode Addresses</Button> 
